@@ -23,30 +23,30 @@ Theory first. Understand the problem before writing the solution.
 Setting up a robust development workflow.
 
 ### 3. [Setup and Code Generation](phase2/3/3.md)
-- [ ] 3.1. Installing the Protocol Buffers Compiler (protoc).
-- [ ] 3.2. Go Setup: Installing protoc-gen-go and protoc-gen-go-grpc.
-- [ ] 3.3. Python Setup: Installing grpcio and grpcio-tools.
-- [ ] 3.4. C++ Setup: Configuring CMake/Bazel for gRPC.
-- [ ] 3.5. Modern Tooling (Recommended): Installing and configuring Buf (replaces complex protoc commands).
-- [ ] 3.6. Lab: Generate code for a simple User message in all three languages and inspect the output files.
+- [x] 3.1. Installing the Protocol Buffers Compiler (protoc).
+- [x] 3.2. Go Setup: Installing protoc-gen-go and protoc-gen-go-grpc.
+- [x] 3.3. Python Setup: Installing grpcio and grpcio-tools.
+- [x] 3.4. C++ Setup: Configuring CMake/Bazel for gRPC.
+- [x] 3.5. Modern Tooling (Recommended): Installing and configuring Buf (replaces complex protoc commands).
+- [x] 3.6. Lab: Generate code for a simple User message in all three languages and inspect the output files.
 
 ## Phase 3: Core Implementation (Polyglot)
 Mastering the 4 communication patterns. Focus on concurrency differences.
 
-### 4. Unary RPC (Simple Request-Response)
-- [ ] 4.1. Defining a Unary service in .proto.
-- [ ] 4.2. Go Implementation:
-	- [ ] Implementing the Server interface.
-	- [ ] Using context.Context.
-	- [ ] Creating a Client connection (grpc.Dial).
-- [ ] 4.3. C++ Implementation:
-	- [ ] Synchronous Service implementation.
-	- [ ] Understanding grpc::Status and grpc::ServerContext.
-	- [ ] Managing string/bytes memory.
-- [ ] 4.4. Python Implementation:
-	- [ ] Implementing the Servicer class.
-	- [ ] Starting the grpc.server with a thread pool.
-- [ ] 4.5. Exercise: Build a "Calculator Service" (Add, Subtract) with a Go Server and Python Client.
+### 4. [Unary RPC (Simple Request-Response)](phase3/4/4.md)
+- [x] 4.1. Defining a Unary service in .proto.
+- [x] 4.2. Go Implementation:
+	- [x] Implementing the Server interface.
+	- [x] Using context.Context.
+	- [x] Creating a Client connection (grpc.Dial).
+- [x] 4.3. C++ Implementation:
+	- [x] Synchronous Service implementation.
+	- [x] Understanding grpc::Status and grpc::ServerContext.
+	- [x] Managing string/bytes memory.
+- [x] 4.4. Python Implementation:
+	- [x] Implementing the Servicer class.
+	- [x] Starting the grpc.server with a thread pool.
+- [x] 4.5. Exercise: Build a "Calculator Service" (Add, Subtract) with a Go Server and Python Client.
 
 ### 5. Server Streaming RPC (One Request, Many Responses)
 - [ ] 5.1. Use cases: Real-time feeds, large dataset downloads.
