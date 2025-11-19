@@ -1,2 +1,135 @@
-# protobuf-grpc-reference
-protobuf-grpc-reference
+# gRPC & Protocol Buffers
+Target Languages: Go, C++, Python
+
+## Phase 1: Conceptual Foundations & The "Why"
+Theory first. Understand the problem before writing the solution.
+
+### 1. Introduction to Modern RPC
+- [x] 1.1. The Evolution of APIs: SOAP vs. REST vs. GraphQL vs. gRPC.
+- [x] 1.2. HTTP/2 Deep Dive: Multiplexing, Header Compression (HPACK), and binary framing.
+- [x] 1.3. Why gRPC? (Strict contracts, Code generation, Low latency).
+- [x] 1.4. Industry Use Cases: Microservices (internal traffic), Mobile, Browser (gRPC-Web).
+
+### 2. Protocol Buffers (The Data Layer)
+- [ ] 2.1. Serialization concepts: Text (JSON/XML) vs. Binary (Protobuf).
+- [ ] 2.2. Anatomy of a .proto file (syntax = "proto3";, package).
+- [ ] 2.3. Scalar Value Types (int32, float, bool, string, bytes).
+- [ ] 2.4. Complex Types: message, enum, repeated (arrays), map.
+- [ ] 2.5. Handling Nullability and Optional fields in proto3.
+- [ ] 2.6. oneof: Handling union types.
+- [ ] 2.7. Any type: Embedding arbitrary messages.
+
+## Phase 2: Environment & Tooling
+Setting up a robust development workflow.
+
+### 3. Setup and Code Generation
+- [ ] 3.1. Installing the Protocol Buffers Compiler (protoc).
+- [ ] 3.2. Go Setup: Installing protoc-gen-go and protoc-gen-go-grpc.
+- [ ] 3.3. Python Setup: Installing grpcio and grpcio-tools.
+- [ ] 3.4. C++ Setup: Configuring CMake/Bazel for gRPC.
+- [ ] 3.5. Modern Tooling (Recommended): Installing and configuring Buf (replaces complex protoc commands).
+- [ ] 3.6. Lab: Generate code for a simple User message in all three languages and inspect the output files.
+
+## Phase 3: Core Implementation (Polyglot)
+Mastering the 4 communication patterns. Focus on concurrency differences.
+
+### 4. Unary RPC (Simple Request-Response)
+- [ ] 4.1. Defining a Unary service in .proto.
+- [ ] 4.2. Go Implementation:
+	- [ ] Implementing the Server interface.
+	- [ ] Using context.Context.
+	- [ ] Creating a Client connection (grpc.Dial).
+- [ ] 4.3. C++ Implementation:
+	- [ ] Synchronous Service implementation.
+	- [ ] Understanding grpc::Status and grpc::ServerContext.
+	- [ ] Managing string/bytes memory.
+- [ ] 4.4. Python Implementation:
+	- [ ] Implementing the Servicer class.
+	- [ ] Starting the grpc.server with a thread pool.
+- [ ] 4.5. Exercise: Build a "Calculator Service" (Add, Subtract) with a Go Server and Python Client.
+
+### 5. Server Streaming RPC (One Request, Many Responses)
+- [ ] 5.1. Use cases: Real-time feeds, large dataset downloads.
+- [ ] 5.2. Defining stream in the return type.
+- [ ] 5.3. Go: Sending messages into the stream object.
+- [ ] 5.4. C++: Using ServerWriter loop.
+- [ ] 5.5. Python: Using generators (yield) for responses.
+- [ ] 5.6. Exercise: Build a "Stock Ticker" that streams random prices every second.
+
+### 6. Client Streaming RPC (Many Requests, One Response)
+- [ ] 6.1. Use cases: File uploads, IoT sensor ingestion.
+- [ ] 6.2. Defining stream in the argument type.
+- [ ] 6.3. Go: Using Recv() inside a loop until EOF.
+- [ ] 6.4. C++: Using ServerReader to aggregate data.
+- [ ] 6.5. Python: Iterating over the request iterator.
+- [ ] 6.6. Exercise: Build an "Image Uploader" (upload chunks, return total size).
+
+### 7. Bidirectional Streaming RPC (Many Requests, Many Responses)
+- [ ] 7.1. Use cases: Chat apps, Multiplayer games, Live synchronization.
+- [ ] 7.2. Go: Handling independent Send and Recv in goroutines.
+- [ ] 7.3. C++: Using ServerReaderWriter.
+- [ ] 7.4. Python: Consuming an iterator while yielding responses simultaneously.
+- [ ] 7.5. Exercise: Build a "Chat Room" (C++ Server, Python & Go Clients).
+
+## Phase 4: Production Engineering & Best Practices
+Moving from "it works" to "it scales".
+
+### 8. Schema Design & Evolution
+- [ ] 8.1. Google's Style Guide for .proto.
+- [ ] 8.2. Field Numbering Rules: Why you never reuse numbers.
+- [ ] 8.3. Backward & Forward Compatibility strategies.
+- [ ] 8.4. Using reserved fields.
+- [ ] 8.5. Well-Known Types (Timestamp, Duration, Struct).
+
+### 9. Reliability & Error Handling
+- [ ] 9.1. The gRPC Status Codes (OK, CANCELLED, DEADLINE_EXCEEDED, UNIMPLEMENTED, etc.).
+- [ ] 9.2. Go: Using the status and codes packages.
+- [ ] 9.3. C++: Catching exceptions vs checking Status.
+- [ ] 9.4. Deadlines & Timeouts:
+	- [ ] Setting deadlines in Go Contexts.
+	- [ ] Setting deadlines in C++ ClientContext.
+	- [ ] Why default timeouts are necessary.
+- [ ] 9.5. Retries: Configuring exponential backoff policies.
+
+### 10. Metadata & Security
+- [ ] 10.1. What is Metadata? (Headers/Trailers).
+- [ ] 10.2. Sending Auth Tokens (JWT) via metadata.
+- [ ] 10.3. TLS/SSL: Setting up secure credentials.
+- [ ] 10.4. mTLS (Mutual TLS): Configuring certificates for Zero Trust.
+
+### 11. Interceptors (Middleware)
+- [ ] 11.1. Go: UnaryServerInterceptor and StreamServerInterceptor.
+- [ ] 11.2. Python: Client and Server interceptors.
+- [ ] 11.3. C++: AuthMetadataProcessor and generic interceptors.
+- [ ] 11.4. Use cases: Logging, Tracing (OpenTelemetry), Authentication validation.
+
+## Phase 5: Advanced Performance & Internals
+Deep dive for high-performance requirements.
+
+### 12. Advanced C++ & Go Tuning
+- [ ] 12.1. C++ Arenas: Optimizing memory allocation for Protobuf.
+- [ ] 12.2. C++ Move Semantics: Avoiding copies in message passing.
+- [ ] 12.3. Go: Buffer reuse and Goroutine pooling.
+- [ ] 12.4. Concurrency Models: Thread-per-request (C++) vs Async vs Goroutines.
+
+### 13. Ecosystem & Integration
+- [ ] 13.1. gRPC-Gateway: Exposing gRPC as REST/JSON automatically.
+- [ ] 13.2. gRPC-Web: Connecting frontend apps (JS/TS).
+- [ ] 13.3. Load Balancing strategies (L7 vs L4).
+- [ ] 13.4. CLI Tools: grpcurl and Evans.
+
+### 14. Internals (Under the Hood)
+- [ ] 14.1. Wire Format: Understanding Base 128 Varints.
+- [ ] 14.2. ZigZag Encoding for signed integers.
+- [ ] 14.3. How Protobuf handles field tags and wire types binary-level.
+
+## Phase 6: Capstone Project
+Final Exam: Polyglot Distributed System.
+
+### 15. Project: Distributed File Storage System
+- [ ] 15.1. Define the Schema: FileService, MetaService, Blob messages.
+- [ ] 15.2. Component A (Master Node - Go): Manage file metadata, locations, and auth tokens.
+- [ ] 15.3. Component B (Storage Nodes - C++): High-performance streaming of file chunks to/from disk.
+- [ ] 15.4. Component C (CLI Client - Python): Script to upload/download files and check status.
+- [ ] 15.5. Requirement: Implement mTLS between all nodes.
+- [ ] 15.6. Requirement: Handle network interruptions (resume upload).
