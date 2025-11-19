@@ -22,7 +22,7 @@ Theory first. Understand the problem before writing the solution.
 ## Phase 2: Environment & Tooling
 Setting up a robust development workflow.
 
-### 3. Setup and Code Generation
+### 3. [Setup and Code Generation](phase2/3/3.md)
 - [ ] 3.1. Installing the Protocol Buffers Compiler (protoc).
 - [ ] 3.2. Go Setup: Installing protoc-gen-go and protoc-gen-go-grpc.
 - [ ] 3.3. Python Setup: Installing grpcio and grpcio-tools.
