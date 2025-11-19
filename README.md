@@ -11,13 +11,13 @@ Theory first. Understand the problem before writing the solution.
 - [x] 1.4. Industry Use Cases: Microservices (internal traffic), Mobile, Browser (gRPC-Web).
 
 ### 2. [Protocol Buffers (The Data Layer)](phase1/1/2.md)
-- [ ] 2.1. Serialization concepts: Text (JSON/XML) vs. Binary (Protobuf).
-- [ ] 2.2. Anatomy of a .proto file (syntax = "proto3";, package).
-- [ ] 2.3. Scalar Value Types (int32, float, bool, string, bytes).
-- [ ] 2.4. Complex Types: message, enum, repeated (arrays), map.
-- [ ] 2.5. Handling Nullability and Optional fields in proto3.
-- [ ] 2.6. oneof: Handling union types.
-- [ ] 2.7. Any type: Embedding arbitrary messages.
+- [x] 2.1. Serialization concepts: Text (JSON/XML) vs. Binary (Protobuf).
+- [x] 2.2. Anatomy of a .proto file (syntax = "proto3";, package).
+- [x] 2.3. Scalar Value Types (int32, float, bool, string, bytes).
+- [x] 2.4. Complex Types: message, enum, repeated (arrays), map.
+- [x] 2.5. Handling Nullability and Optional fields in proto3.
+- [x] 2.6. oneof: Handling union types.
+- [x] 2.7. Any type: Embedding arbitrary messages.
 
 ## Phase 2: Environment & Tooling
 Setting up a robust development workflow.
