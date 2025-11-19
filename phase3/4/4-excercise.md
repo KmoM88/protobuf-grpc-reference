@@ -101,8 +101,8 @@ This client connects to the Go server on port 50051 and performs the two require
 import grpc
 
 # Import generated modules
-from calculator import calculator_pb2 as pb
-from calculator import calculator_pb2_grpc as rpc
+import calculator_pb2 as pb
+import calculator_pb2_grpc as rpc
 
 def run():
     # 4.2. Connection: Create an insecure channel to the Go server
@@ -142,7 +142,7 @@ def run():
         except grpc.RpcError as e:
             print(f"Error in Subtract call: {e.details()}")
 
-if __name__ == '__main '__main__':
+if __name__ == '__main__':
     run()
 ```
 
@@ -150,14 +150,26 @@ if __name__ == '__main '__main__':
 
 1. Generate Code:
 ```bash
-protoc --proto_path=proto --go_out=go --go_opt=paths=source_relative proto/calculator.proto
-python -m grpc_tools.protoc --proto_path=proto --python_out=python --pyi_out=python --grpc_out=python --plugin=protoc-gen-grpc=`which grpc_python_plugin` proto/calculator.proto
+protoc --proto_path=proto \
+       --go_out=go/calculatorpb --go_opt=paths=source_relative \
+       --go-grpc_out=go/calculatorpb --go-grpc_opt=paths=source_relative \
+       proto/calculator.proto
+python -m grpc_tools.protoc --proto_path=proto \
+                           --python_out=python \
+                           --pyi_out=python \
+                           --grpc_python_out=python \
+                           proto/calculator.proto
 ```
 Note: We use the full cmd in python to generate the gRPC stubs.
 
-2. Start the Go Server: In one terminal, navigate to go/server and run:
+2. Start the Go Server: In one terminal run:
 
 ```bash
+# In chapter root (phase3/4)
+go mod init protobuf-grpc-reference/phase3/4
+go mod tidy
+cd go/server
+# in go/server
 go run main.go
 # Output should be: ✅ Go Server started successfully on port 50051
 ```
