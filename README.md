@@ -4,13 +4,13 @@ Target Languages: Go, C++, Python
 ## Phase 1: Conceptual Foundations & The "Why"
 Theory first. Understand the problem before writing the solution.
 
-### 1. Introduction to Modern RPC
+### 1. [Introduction to Modern RPC](phase1/1/1.md)
 - [x] 1.1. The Evolution of APIs: SOAP vs. REST vs. GraphQL vs. gRPC.
 - [x] 1.2. HTTP/2 Deep Dive: Multiplexing, Header Compression (HPACK), and binary framing.
 - [x] 1.3. Why gRPC? (Strict contracts, Code generation, Low latency).
 - [x] 1.4. Industry Use Cases: Microservices (internal traffic), Mobile, Browser (gRPC-Web).
 
-### 2. Protocol Buffers (The Data Layer)
+### 2. [Protocol Buffers (The Data Layer)](phase1/1/2.md)
 - [ ] 2.1. Serialization concepts: Text (JSON/XML) vs. Binary (Protobuf).
 - [ ] 2.2. Anatomy of a .proto file (syntax = "proto3";, package).
 - [ ] 2.3. Scalar Value Types (int32, float, bool, string, bytes).
