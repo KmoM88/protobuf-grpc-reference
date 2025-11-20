@@ -1,0 +1,51 @@
+syntax = "proto3";
+
+package storage;
+
+option go_package = "./storagepb";
+
+// Define common messages for file structure
+message FileMetadata {
+    string file_id = 1;
+    string filename = 2;
+    int64 size_bytes = 3;
+    string storage_node_address = 4; // Address of the Storage Node holding the file
+    string auth_token = 5; // Token for client to talk to Storage Node
+}
+
+message FileChunk {
+    string file_id = 1;
+    int32 chunk_index = 2;
+    bytes data = 3;
+    int64 offset = 4;
+}
+
+message UploadStatus {
+    string file_id = 1;
+    int64 bytes_received = 2;
+    bool success = 3;
+    string message = 4;
+}
+
+// === Service 1: MetaService (Unary/Server Streaming) ===
+// Handled by the Master Node (Go)
+service MetaService {
+    // Unary: Client registers the intent to upload a file. Master assigns storage and token.
+    rpc RequestUpload (FileMetadata) returns (FileMetadata);
+
+    // Unary: Client queries the Master for a file's location to download it.
+    rpc GetFileLocation (FileMetadata) returns (FileMetadata);
+
+    // Server Streaming: Get status of all files (for admin/monitoring).
+    rpc GetSystemStatus (Empty) returns (stream FileMetadata);
+}
+
+// === Service 2: FileService (Bidirectional Streaming) ===
+// Handled by the Storage Node (Go)
+service FileService {
+    // Bidirectional Stream: Handles both upload (client stream) and download (server stream)
+    // in a single session, allowing for control messages.
+    rpc StreamFile (stream FileChunk) returns (stream FileChunk);
+}
+
+message Empty {}

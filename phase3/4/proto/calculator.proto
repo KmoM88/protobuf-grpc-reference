@@ -1,0 +1,32 @@
+syntax = "proto3";
+
+package calculator;
+
+option go_package = "./calculatorpb";
+
+// 1. Define the Service Interface
+service CalculatorService {
+  // A Unary RPC method: takes an Input, returns an Output.
+  rpc Add (AddRequest) returns (AddResponse);
+  rpc Subtract (SubtractRequest) returns (SubtractResponse);
+}
+
+// 2. Define Request Message
+message AddRequest {
+  int32 num1 = 1;
+  int32 num2 = 2;
+}
+
+// 3. Define Response Message
+message AddResponse {
+  int32 result = 1;
+}
+
+// (Similar messages for Subtract will be used in the exercise)
+message SubtractRequest {
+  int32 num1 = 1;
+  int32 num2 = 2;
+}
+message SubtractResponse {
+  int32 result = 1;
+}

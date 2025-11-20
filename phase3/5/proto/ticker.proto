@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+package ticker;
+
+option go_package = "./tickerpb";
+
+service TickerService {
+  // Defines Server Streaming: The response is a stream of StockPrice messages.
+  rpc GetStockPrices (TickerRequest) returns (stream StockPrice);
+}
+
+message TickerRequest {
+  // Symbol to monitor, e.g., "TSLA"
+  string symbol = 1;
+}
+
+message StockPrice {
+  string symbol = 1;
+  double price = 2;
+  int64 timestamp = 3;
+}

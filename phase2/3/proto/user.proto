@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+package user;
+
+option go_package = "./userpb";
+option csharp_namespace = "User.Service"; // Used for C# generation example
+
+// A simple message defining a user object.
+message User {
+  int32 id = 1;
+  string name = 2;
+  string email = 3;
+}
