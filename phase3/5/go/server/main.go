@@ -7,7 +7,7 @@ import (
 	"net"
 	"time"
 
-	pb "protobuf-grpc-reference/phase3/5/go/tickerpb" // Assuming tickerpb is generated here
+	pb "protobuf-grpc-reference/phase3/5/go/tickerpb"
 
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/codes"
