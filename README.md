@@ -91,11 +91,11 @@ Moving from "it works" to "it scales".
 	- [x] Why default timeouts are necessary.
 - [x] 9.5. Retries: Configuring exponential backoff policies.
 
-### 10. Metadata & Security
-- [ ] 10.1. What is Metadata? (Headers/Trailers).
-- [ ] 10.2. Sending Auth Tokens (JWT) via metadata.
-- [ ] 10.3. TLS/SSL: Setting up secure credentials.
-- [ ] 10.4. mTLS (Mutual TLS): Configuring certificates for Zero Trust.
+### 10. [Metadata & Security](phase4/10/10.md)
+- [x] 10.1. What is Metadata? (Headers/Trailers).
+- [x] 10.2. Sending Auth Tokens (JWT) via metadata.
+- [x] 10.3. TLS/SSL: Setting up secure credentials.
+- [x] 10.4. mTLS (Mutual TLS): Configuring certificates for Zero Trust.
 
 ### 11. Interceptors (Middleware)
 - [ ] 11.1. Go: UnaryServerInterceptor and StreamServerInterceptor.
