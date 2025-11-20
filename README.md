@@ -64,12 +64,12 @@ Mastering the 4 communication patterns. Focus on concurrency differences.
 - [x] 6.5. Python: Iterating over the request iterator.
 - [x] 6.6. Exercise: Build an "Image Uploader" (upload chunks, return total size).
 
-### 7. Bidirectional Streaming RPC (Many Requests, Many Responses)
-- [ ] 7.1. Use cases: Chat apps, Multiplayer games, Live synchronization.
-- [ ] 7.2. Go: Handling independent Send and Recv in goroutines.
-- [ ] 7.3. C++: Using ServerReaderWriter.
-- [ ] 7.4. Python: Consuming an iterator while yielding responses simultaneously.
-- [ ] 7.5. Exercise: Build a "Chat Room" (Python & Go Clients).
+### 7. [Bidirectional Streaming RPC (Many Requests, Many Responses)](phase3/7/7.md)
+- [x] 7.1. Use cases: Chat apps, Multiplayer games, Live synchronization.
+- [x] 7.2. Go: Handling independent Send and Recv in goroutines.
+- [x] 7.3. C++: Using ServerReaderWriter.
+- [x] 7.4. Python: Consuming an iterator while yielding responses simultaneously.
+- [x] 7.5. Exercise: Build a "Chat Room" (Python & Go Clients).
 
 ## Phase 4: Production Engineering & Best Practices
 Moving from "it works" to "it scales".

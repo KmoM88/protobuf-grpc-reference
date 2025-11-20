@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package chat;
+
+option go_package = "./chatpb";
+
+service ChatService {
+  // Bidirectional Streaming: User sends messages, and receives messages from others.
+  rpc JoinChat (stream ChatMessage) returns (stream ChatMessage);
+}
+
+message ChatMessage {
+  string user_id = 1;
+  string text = 2;
+  int64 timestamp = 3; // For time-stamping messages
+}
