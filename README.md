@@ -106,11 +106,11 @@ Moving from "it works" to "it scales".
 ## Phase 5: Advanced Performance & Internals
 Deep dive for high-performance requirements.
 
-### 12. Advanced C++ & Go Tuning
-- [ ] 12.1. C++ Arenas: Optimizing memory allocation for Protobuf.
-- [ ] 12.2. C++ Move Semantics: Avoiding copies in message passing.
-- [ ] 12.3. Go: Buffer reuse and Goroutine pooling.
-- [ ] 12.4. Concurrency Models: Thread-per-request (C++) vs Async vs Goroutines.
+### 12. [Advanced C++ & Go Tuning](phase5/12/12.md)
+- [x] 12.1. C++ Arenas: Optimizing memory allocation for Protobuf.
+- [x] 12.2. C++ Move Semantics: Avoiding copies in message passing.
+- [x] 12.3. Go: Buffer reuse and Goroutine pooling.
+- [x] 12.4. Concurrency Models: Thread-per-request (C++) vs Async vs Goroutines.
 
 ### 13. Ecosystem & Integration
 - [ ] 13.1. gRPC-Gateway: Exposing gRPC as REST/JSON automatically.
