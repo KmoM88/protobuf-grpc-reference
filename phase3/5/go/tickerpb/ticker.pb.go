@@ -2,7 +2,7 @@
 // versions:
 // 	protoc-gen-go v1.36.10
 // 	protoc        v6.33.1
-// source: ticket.proto
+// source: ticker.proto
 
 package tickerpb
 
@@ -31,7 +31,7 @@ type TickerRequest struct {
 
 func (x *TickerRequest) Reset() {
 	*x = TickerRequest{}
-	mi := &file_ticket_proto_msgTypes[0]
+	mi := &file_ticker_proto_msgTypes[0]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -43,7 +43,7 @@ func (x *TickerRequest) String() string {
 func (*TickerRequest) ProtoMessage() {}
 
 func (x *TickerRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_ticket_proto_msgTypes[0]
+	mi := &file_ticker_proto_msgTypes[0]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -56,7 +56,7 @@ func (x *TickerRequest) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use TickerRequest.ProtoReflect.Descriptor instead.
 func (*TickerRequest) Descriptor() ([]byte, []int) {
-	return file_ticket_proto_rawDescGZIP(), []int{0}
+	return file_ticker_proto_rawDescGZIP(), []int{0}
 }
 
 func (x *TickerRequest) GetSymbol() string {
@@ -77,7 +77,7 @@ type StockPrice struct {
 
 func (x *StockPrice) Reset() {
 	*x = StockPrice{}
-	mi := &file_ticket_proto_msgTypes[1]
+	mi := &file_ticker_proto_msgTypes[1]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -89,7 +89,7 @@ func (x *StockPrice) String() string {
 func (*StockPrice) ProtoMessage() {}
 
 func (x *StockPrice) ProtoReflect() protoreflect.Message {
-	mi := &file_ticket_proto_msgTypes[1]
+	mi := &file_ticker_proto_msgTypes[1]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -102,7 +102,7 @@ func (x *StockPrice) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use StockPrice.ProtoReflect.Descriptor instead.
 func (*StockPrice) Descriptor() ([]byte, []int) {
-	return file_ticket_proto_rawDescGZIP(), []int{1}
+	return file_ticker_proto_rawDescGZIP(), []int{1}
 }
 
 func (x *StockPrice) GetSymbol() string {
@@ -126,11 +126,11 @@ func (x *StockPrice) GetTimestamp() int64 {
 	return 0
 }
 
-var File_ticket_proto protoreflect.FileDescriptor
+var File_ticker_proto protoreflect.FileDescriptor
 
-const file_ticket_proto_rawDesc = "" +
+const file_ticker_proto_rawDesc = "" +
 	"\n" +
-	"\fticket.proto\x12\x06ticker\"'\n" +
+	"\fticker.proto\x12\x06ticker\"'\n" +
 	"\rTickerRequest\x12\x16\n" +
 	"\x06symbol\x18\x01 \x01(\tR\x06symbol\"X\n" +
 	"\n" +
@@ -143,23 +143,23 @@ const file_ticket_proto_rawDesc = "" +
 	"./tickerpbb\x06proto3"
 
 var (
-	file_ticket_proto_rawDescOnce sync.Once
-	file_ticket_proto_rawDescData []byte
+	file_ticker_proto_rawDescOnce sync.Once
+	file_ticker_proto_rawDescData []byte
 )
 
-func file_ticket_proto_rawDescGZIP() []byte {
-	file_ticket_proto_rawDescOnce.Do(func() {
-		file_ticket_proto_rawDescData = protoimpl.X.CompressGZIP(unsafe.Slice(unsafe.StringData(file_ticket_proto_rawDesc), len(file_ticket_proto_rawDesc)))
+func file_ticker_proto_rawDescGZIP() []byte {
+	file_ticker_proto_rawDescOnce.Do(func() {
+		file_ticker_proto_rawDescData = protoimpl.X.CompressGZIP(unsafe.Slice(unsafe.StringData(file_ticker_proto_rawDesc), len(file_ticker_proto_rawDesc)))
 	})
-	return file_ticket_proto_rawDescData
+	return file_ticker_proto_rawDescData
 }
 
-var file_ticket_proto_msgTypes = make([]protoimpl.MessageInfo, 2)
-var file_ticket_proto_goTypes = []any{
+var file_ticker_proto_msgTypes = make([]protoimpl.MessageInfo, 2)
+var file_ticker_proto_goTypes = []any{
 	(*TickerRequest)(nil), // 0: ticker.TickerRequest
 	(*StockPrice)(nil),    // 1: ticker.StockPrice
 }
-var file_ticket_proto_depIdxs = []int32{
+var file_ticker_proto_depIdxs = []int32{
 	0, // 0: ticker.TickerService.GetStockPrices:input_type -> ticker.TickerRequest
 	1, // 1: ticker.TickerService.GetStockPrices:output_type -> ticker.StockPrice
 	1, // [1:2] is the sub-list for method output_type
@@ -169,26 +169,26 @@ var file_ticket_proto_depIdxs = []int32{
 	0, // [0:0] is the sub-list for field type_name
 }
 
-func init() { file_ticket_proto_init() }
-func file_ticket_proto_init() {
-	if File_ticket_proto != nil {
+func init() { file_ticker_proto_init() }
+func file_ticker_proto_init() {
+	if File_ticker_proto != nil {
 		return
 	}
 	type x struct{}
 	out := protoimpl.TypeBuilder{
 		File: protoimpl.DescBuilder{
 			GoPackagePath: reflect.TypeOf(x{}).PkgPath(),
-			RawDescriptor: unsafe.Slice(unsafe.StringData(file_ticket_proto_rawDesc), len(file_ticket_proto_rawDesc)),
+			RawDescriptor: unsafe.Slice(unsafe.StringData(file_ticker_proto_rawDesc), len(file_ticker_proto_rawDesc)),
 			NumEnums:      0,
 			NumMessages:   2,
 			NumExtensions: 0,
 			NumServices:   1,
 		},
-		GoTypes:           file_ticket_proto_goTypes,
-		DependencyIndexes: file_ticket_proto_depIdxs,
-		MessageInfos:      file_ticket_proto_msgTypes,
+		GoTypes:           file_ticker_proto_goTypes,
+		DependencyIndexes: file_ticker_proto_depIdxs,
+		MessageInfos:      file_ticker_proto_msgTypes,
 	}.Build()
-	File_ticket_proto = out.File
-	file_ticket_proto_goTypes = nil
-	file_ticket_proto_depIdxs = nil
+	File_ticker_proto = out.File
+	file_ticker_proto_goTypes = nil
+	file_ticker_proto_depIdxs = nil
 }

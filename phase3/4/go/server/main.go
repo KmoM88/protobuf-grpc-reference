@@ -5,7 +5,7 @@ import (
 	"log"
 	"net"
 
-	// Import the generated protobuf code (adjust path if needed)
+	// Import the protobuf module
 	pb "protobuf-grpc-reference/phase3/4/go/calculatorpb"
 
 	"google.golang.org/grpc"

@@ -158,6 +158,7 @@ if __name__ == '__main__':
 ```
 ## 4. Execution Order
 - Generate Go and Python Code (using the commands learned in Chapter 3/4).
+- If needed clean go cache and modcache with `go clean -cache -modcache`.
 - Start Go Server (`cd go/server && go run main.go`).
 - Run Python Client (`cd python && python client.py`).
 

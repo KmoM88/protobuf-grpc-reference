@@ -26,8 +26,8 @@ import (
 	"log"
 	"net"
 
-	// Import the generated protobuf code (adjust path if needed)
-	pb "./calculatorpb"
+	pb "protobuf-grpc-reference/phase3/4/go/calculatorpb"
+
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/codes"
 	"google.golang.org/grpc/status"

@@ -48,13 +48,13 @@ Mastering the 4 communication patterns. Focus on concurrency differences.
 	- [x] Starting the grpc.server with a thread pool.
 - [x] 4.5. Exercise: Build a "Calculator Service" (Add, Subtract) with a Go Server and Python Client.
 
-### 5. Server Streaming RPC (One Request, Many Responses)
-- [ ] 5.1. Use cases: Real-time feeds, large dataset downloads.
-- [ ] 5.2. Defining stream in the return type.
-- [ ] 5.3. Go: Sending messages into the stream object.
-- [ ] 5.4. C++: Using ServerWriter loop.
-- [ ] 5.5. Python: Using generators (yield) for responses.
-- [ ] 5.6. Exercise: Build a "Stock Ticker" that streams random prices every second.
+### 5. [Server Streaming RPC (One Request, Many Responses)](phase3/5/5.md)
+- [x] 5.1. Use cases: Real-time feeds, large dataset downloads.
+- [x] 5.2. Defining stream in the return type.
+- [x] 5.3. Go: Sending messages into the stream object.
+- [x] 5.4. C++: Using ServerWriter loop.
+- [x] 5.5. Python: Using generators (yield) for responses.
+- [x] 5.6. Exercise: Build a "Stock Ticker" that streams random prices every second.
 
 ### 6. Client Streaming RPC (Many Requests, One Response)
 - [ ] 6.1. Use cases: File uploads, IoT sensor ingestion.

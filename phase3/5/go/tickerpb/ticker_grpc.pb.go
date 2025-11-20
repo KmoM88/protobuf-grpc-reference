@@ -2,7 +2,7 @@
 // versions:
 // - protoc-gen-go-grpc v1.5.1
 // - protoc             v6.33.1
-// source: ticket.proto
+// source: ticker.proto
 
 package tickerpb
 
@@ -122,5 +122,5 @@ var TickerService_ServiceDesc = grpc.ServiceDesc{
 			ServerStreams: true,
 		},
 	},
-	Metadata: "ticket.proto",
+	Metadata: "ticker.proto",
 }
