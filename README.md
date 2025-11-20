@@ -74,12 +74,12 @@ Mastering the 4 communication patterns. Focus on concurrency differences.
 ## Phase 4: Production Engineering & Best Practices
 Moving from "it works" to "it scales".
 
-### 8. Schema Design & Evolution
-- [ ] 8.1. Google's Style Guide for .proto.
-- [ ] 8.2. Field Numbering Rules: Why you never reuse numbers.
-- [ ] 8.3. Backward & Forward Compatibility strategies.
-- [ ] 8.4. Using reserved fields.
-- [ ] 8.5. Well-Known Types (Timestamp, Duration, Struct).
+### 8. [Schema Design & Evolution](phase4/8/8.md)
+- [x] 8.1. Google's Style Guide for .proto.
+- [x] 8.2. Field Numbering Rules: Why you never reuse numbers.
+- [x] 8.3. Backward & Forward Compatibility strategies.
+- [x] 8.4. Using reserved fields.
+- [x] 8.5. Well-Known Types (Timestamp, Duration, Struct).
 
 ### 9. Reliability & Error Handling
 - [ ] 9.1. The gRPC Status Codes (OK, CANCELLED, DEADLINE_EXCEEDED, UNIMPLEMENTED, etc.).
