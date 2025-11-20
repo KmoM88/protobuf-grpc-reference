@@ -2,8 +2,6 @@ import grpc
 import time
 
 # Import generated modules (adjust import based on your generation path)
-# from ticker import ticker_pb2 as pb
-# from ticker import ticker_pb2_grpc as rpc
 import ticker_pb2 as pb
 import ticker_pb2_grpc as rpc
 
