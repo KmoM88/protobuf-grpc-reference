@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+package uploader;
+
+option go_package = "./uploaderpb";
+
+service UploaderService {
+  // Defines Client Streaming: The request is a stream of ImageChunk messages.
+  rpc UploadImage (stream ImageChunk) returns (UploadSummary);
+}
+
+message ImageChunk {
+  // Raw byte data for a file chunk
+  bytes data = 1;
+}
+
+message UploadSummary {
+  int32 total_chunks = 1;
+  int64 total_bytes = 2;
+}

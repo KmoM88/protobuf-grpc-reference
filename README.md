@@ -56,13 +56,13 @@ Mastering the 4 communication patterns. Focus on concurrency differences.
 - [x] 5.5. Python: Using generators (yield) for responses.
 - [x] 5.6. Exercise: Build a "Stock Ticker" that streams random prices every second.
 
-### 6. Client Streaming RPC (Many Requests, One Response)
-- [ ] 6.1. Use cases: File uploads, IoT sensor ingestion.
-- [ ] 6.2. Defining stream in the argument type.
-- [ ] 6.3. Go: Using Recv() inside a loop until EOF.
-- [ ] 6.4. C++: Using ServerReader to aggregate data.
-- [ ] 6.5. Python: Iterating over the request iterator.
-- [ ] 6.6. Exercise: Build an "Image Uploader" (upload chunks, return total size).
+### 6. [Client Streaming RPC (Many Requests, One Response)](phase3/6/6.md)
+- [x] 6.1. Use cases: File uploads, IoT sensor ingestion.
+- [x] 6.2. Defining stream in the argument type.
+- [x] 6.3. Go: Using Recv() inside a loop until EOF.
+- [x] 6.4. C++: Using ServerReader to aggregate data.
+- [x] 6.5. Python: Iterating over the request iterator.
+- [x] 6.6. Exercise: Build an "Image Uploader" (upload chunks, return total size).
 
 ### 7. Bidirectional Streaming RPC (Many Requests, Many Responses)
 - [ ] 7.1. Use cases: Chat apps, Multiplayer games, Live synchronization.
