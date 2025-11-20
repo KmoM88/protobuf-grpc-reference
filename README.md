@@ -81,15 +81,15 @@ Moving from "it works" to "it scales".
 - [x] 8.4. Using reserved fields.
 - [x] 8.5. Well-Known Types (Timestamp, Duration, Struct).
 
-### 9. Reliability & Error Handling
-- [ ] 9.1. The gRPC Status Codes (OK, CANCELLED, DEADLINE_EXCEEDED, UNIMPLEMENTED, etc.).
-- [ ] 9.2. Go: Using the status and codes packages.
-- [ ] 9.3. C++: Catching exceptions vs checking Status.
-- [ ] 9.4. Deadlines & Timeouts:
-	- [ ] Setting deadlines in Go Contexts.
-	- [ ] Setting deadlines in C++ ClientContext.
-	- [ ] Why default timeouts are necessary.
-- [ ] 9.5. Retries: Configuring exponential backoff policies.
+### 9. [Reliability & Error Handling](phase4/9/9.md)
+- [x] 9.1. The gRPC Status Codes (OK, CANCELLED, DEADLINE_EXCEEDED, UNIMPLEMENTED, etc.).
+- [x] 9.2. Go: Using the status and codes packages.
+- [x] 9.3. C++: Catching exceptions vs checking Status.
+- [x] 9.4. Deadlines & Timeouts:
+	- [x] Setting deadlines in Go Contexts.
+	- [x] Setting deadlines in C++ ClientContext.
+	- [x] Why default timeouts are necessary.
+- [x] 9.5. Retries: Configuring exponential backoff policies.
 
 ### 10. Metadata & Security
 - [ ] 10.1. What is Metadata? (Headers/Trailers).
