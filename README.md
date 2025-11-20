@@ -97,11 +97,11 @@ Moving from "it works" to "it scales".
 - [x] 10.3. TLS/SSL: Setting up secure credentials.
 - [x] 10.4. mTLS (Mutual TLS): Configuring certificates for Zero Trust.
 
-### 11. Interceptors (Middleware)
-- [ ] 11.1. Go: UnaryServerInterceptor and StreamServerInterceptor.
-- [ ] 11.2. Python: Client and Server interceptors.
-- [ ] 11.3. C++: AuthMetadataProcessor and generic interceptors.
-- [ ] 11.4. Use cases: Logging, Tracing (OpenTelemetry), Authentication validation.
+### 11. [Interceptors (Middleware)](phase4/11/11.md)
+- [x] 11.1. Go: UnaryServerInterceptor and StreamServerInterceptor.
+- [x] 11.2. Python: Client and Server interceptors.
+- [x] 11.3. C++: AuthMetadataProcessor and generic interceptors.
+- [x] 11.4. Use cases: Logging, Tracing (OpenTelemetry), Authentication validation.
 
 ## Phase 5: Advanced Performance & Internals
 Deep dive for high-performance requirements.
