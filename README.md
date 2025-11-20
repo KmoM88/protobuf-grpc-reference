@@ -124,12 +124,12 @@ Deep dive for high-performance requirements.
 - [x] 14.3. How Protobuf handles field tags and wire types binary-level.
 
 ## Phase 6: Capstone Project
-Final Exam: Polyglot Distributed System.
+Polyglot Distributed System.
 
-### 15. Project: Distributed File Storage System
-- [ ] 15.1. Define the Schema: FileService, MetaService, Blob messages.
-- [ ] 15.2. Component A (Master Node - Go): Manage file metadata, locations, and auth tokens.
-- [ ] 15.3. Component B (Storage Nodes - C++): High-performance streaming of file chunks to/from disk.
-- [ ] 15.4. Component C (CLI Client - Python): Script to upload/download files and check status.
-- [ ] 15.5. Requirement: Implement mTLS between all nodes.
-- [ ] 15.6. Requirement: Handle network interruptions (resume upload).
+### 15. Project: Distributed File Storage System (Go & Python)
+- [x] 15.1. Define the Schema: FileService (streaming), MetaService (unary), and Blob messages.
+- [x] 15.2. Component A (Master Node - Go): Implement a service to manage file metadata, location lookup, and handle client authentication tokens.
+- [x] 15.3. Component B (Storage Nodes - Go): Implement a high-performance service using Bidirectional Streaming to handle file chunk uploads to/from disk.
+- [x] 15.4. Component C (CLI Client - Python): Script to upload/download files, communicate with both the Master and Storage nodes, and check system status.
+- [ ] 15.5. Requirement: Implement mTLS between all three services (Master, Storage, and CLI Client).
+- [x] 15.6. Requirement: Handle Network Interruptions (Simulate and implement logic to resume a file upload).
