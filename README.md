@@ -126,7 +126,7 @@ Deep dive for high-performance requirements.
 ## Phase 6: Capstone Project
 Polyglot Distributed System.
 
-### 15. Project: Distributed File Storage System (Go & Python)
+### 15. [Project: Distributed File Storage System (Go & Python)](phase6/15/15.md)
 - [x] 15.1. Define the Schema: FileService (streaming), MetaService (unary), and Blob messages.
 - [x] 15.2. Component A (Master Node - Go): Implement a service to manage file metadata, location lookup, and handle client authentication tokens.
 - [x] 15.3. Component B (Storage Nodes - Go): Implement a high-performance service using Bidirectional Streaming to handle file chunk uploads to/from disk.
