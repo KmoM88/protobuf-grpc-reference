@@ -10,7 +10,7 @@ Theory first. Understand the problem before writing the solution.
 - [x] 1.3. Why gRPC? (Strict contracts, Code generation, Low latency).
 - [x] 1.4. Industry Use Cases: Microservices (internal traffic), Mobile, Browser (gRPC-Web).
 
-### 2. [Protocol Buffers (The Data Layer)](phase1/1/2.md)
+### 2. [Protocol Buffers (The Data Layer)](phase1/2/2.md)
 - [x] 2.1. Serialization concepts: Text (JSON/XML) vs. Binary (Protobuf).
 - [x] 2.2. Anatomy of a .proto file (syntax = "proto3";, package).
 - [x] 2.3. Scalar Value Types (int32, float, bool, string, bytes).
