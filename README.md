@@ -69,7 +69,7 @@ Mastering the 4 communication patterns. Focus on concurrency differences.
 - [ ] 7.2. Go: Handling independent Send and Recv in goroutines.
 - [ ] 7.3. C++: Using ServerReaderWriter.
 - [ ] 7.4. Python: Consuming an iterator while yielding responses simultaneously.
-- [ ] 7.5. Exercise: Build a "Chat Room" (C++ Server, Python & Go Clients).
+- [ ] 7.5. Exercise: Build a "Chat Room" (Python & Go Clients).
 
 ## Phase 4: Production Engineering & Best Practices
 Moving from "it works" to "it scales".
