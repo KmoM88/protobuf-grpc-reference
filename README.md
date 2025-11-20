@@ -112,16 +112,16 @@ Deep dive for high-performance requirements.
 - [x] 12.3. Go: Buffer reuse and Goroutine pooling.
 - [x] 12.4. Concurrency Models: Thread-per-request (C++) vs Async vs Goroutines.
 
-### 13. Ecosystem & Integration
-- [ ] 13.1. gRPC-Gateway: Exposing gRPC as REST/JSON automatically.
-- [ ] 13.2. gRPC-Web: Connecting frontend apps (JS/TS).
-- [ ] 13.3. Load Balancing strategies (L7 vs L4).
-- [ ] 13.4. CLI Tools: grpcurl and Evans.
+### 13. [Ecosystem & Integration](phase5/13/13.md)
+- [x] 13.1. gRPC-Gateway: Exposing gRPC as REST/JSON automatically.
+- [x] 13.2. gRPC-Web: Connecting frontend apps (JS/TS).
+- [x] 13.3. Load Balancing strategies (L7 vs L4).
+- [x] 13.4. CLI Tools: grpcurl and Evans.
 
-### 14. Internals (Under the Hood)
-- [ ] 14.1. Wire Format: Understanding Base 128 Varints.
-- [ ] 14.2. ZigZag Encoding for signed integers.
-- [ ] 14.3. How Protobuf handles field tags and wire types binary-level.
+### 14. [Internals (Under the Hood)](phase5/14/14.md)
+- [x] 14.1. Wire Format: Understanding Base 128 Varints.
+- [x] 14.2. ZigZag Encoding for signed integers.
+- [x] 14.3. How Protobuf handles field tags and wire types binary-level.
 
 ## Phase 6: Capstone Project
 Final Exam: Polyglot Distributed System.
